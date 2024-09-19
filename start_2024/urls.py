@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from app1.views import app1_index
 from app2.views import app2_index
+from home.views import home_index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('app1/', app1_index),
     path('app2/', app2_index),
+    path('', home_index),
 
 ]
