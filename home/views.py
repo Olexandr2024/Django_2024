@@ -7,4 +7,8 @@ from .models import Category, Dish, Event, Chef, Staff, Gallery, Contacts
 def index(request):
     categories = Category.objects.filter(is_visible=True).order_by("sort")
 
-    return render(request, "base.html")
+    context = {
+        "categories": categories,
+    }
+
+    return render(request, "index.html")

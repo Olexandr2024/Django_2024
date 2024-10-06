@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block content %}
+
+<!-- ======= Menu Section ======= -->
+    {% include 'menu.html' %}
+
+    {% include 'events.html' %}
+
+    {% include 'chefs.html' %}
+
+    {% include 'reservations.html' %}
+
+    {% include 'gallery.html' %}
+
+    {% include 'contact.html' %}
+
+{% endblock %}
